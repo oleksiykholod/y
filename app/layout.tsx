@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
 import { auth } from "@/auth";
-import { signIn } from "@/auth";
+import { signIn, signOut } from "@/auth";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +33,7 @@ export default function RootLayout({
 
       </head>
       <body >
+        <button onClick={() => signOut()}>SignOUT</button>
         {children}
       </body>
     </html>
