@@ -33,7 +33,7 @@ export default function RootLayout({
 
       </head>
       <body >
-        <button onClick={() => signOut()}>SignOUT</button>
+        <button className=' bg-red-500 w-6xl' onClick={() => signOut()}>SignOUT</button>
         {children}
       </body>
     </html>
