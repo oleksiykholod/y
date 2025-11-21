@@ -1,16 +1,21 @@
-import { signOut } from "@/auth"
-import { useRouter } from "next/navigation";
- 
+import { redirect } from "next/navigation";
+import { signOut } from "@/auth";
+
 export default function SignOutPage() {
-    const router = useRouter();
+  async function signOutAction(formData: FormData) {
+    "use server";
+    await signOut();
+    redirect("/"); // серверний редірект
+  }
+
   return (
     <div>
       <h5>Are you sure you want to sign out?</h5>
-        <button className=" bg-amber-400 w-3xl" onClick={async () =>{
-            'use server' 
-            await signOut();
-            router.push('/');
-        }} >Sign out</button>
+      <form action={signOutAction}>
+        <button className="bg-amber-400 w-3xl" type="submit">
+          Sign out
+        </button>
+      </form>
     </div>
-  )
+  );
 }
