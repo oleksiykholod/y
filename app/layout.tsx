@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
+import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,9 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossOrigin=""/>
+
+      </head>
+      <body >
         {children}
       </body>
     </html>

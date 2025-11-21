@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Вбудована карта VisiCom
+
+Щоб використовувати карту VisiCom у цьому проєкті, встановіть URL SDK у змінну оточення `NEXT_PUBLIC_VIZICOM_JS` (опціонально). Наприклад:
+
+```bash
+export NEXT_PUBLIC_VIZICOM_JS="https://api.visicom.ua/v2/visicom.js"
+```
+
+Потім запустіть дев-сервер і відкрийте сторінку `/vizikommap`.
+
+Якщо `NEXT_PUBLIC_VIZICOM_JS` не задана, буде використано значення за замовчуванням `https://api.visicom.ua/v2/visicom.js`.
