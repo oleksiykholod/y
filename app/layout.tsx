@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
+import { auth } from "@/auth";
+import { signIn } from "@/auth";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,7 +22,10 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) 
+{ if (!auth()) {
+  return signIn();}
+  else
   return (
     <html lang="en">
       <head>
