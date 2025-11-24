@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.11.1",
+    "@prisma/client": "^7.0.0",
+    "@prisma/extension-accelerate": "^3.0.0",
     "leaflet": "^1.9.4",
     "next": "16.0.3",
     "next-auth": "^5.0.0-beta.30",
@@ -19,12 +22,28 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.21",
-    "@types/node": "^20",
+    "@types/node": "^20.19.25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "prisma": "^6.19.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksiykholod/y.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/oleksiykholod/y/issues"
+  },
+  "homepage": "https://github.com/oleksiykholod/y#readme"
 }
